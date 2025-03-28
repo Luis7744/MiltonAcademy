@@ -1,0 +1,77 @@
+.curso-header {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--bg-secondary);
+}
+
+.curso-header h2 {
+  color: var(--text-color);
+}
+
+.curso-description {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.curso-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+.curso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--card-shadow);
+}
+
+.curso-card .card-title {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.curso-card .card-text {
+  color: var(--text-color);
+}
+
+.curso-card .badge {
+  margin-right: 5px;
+}
+
+.model-section {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.model-title {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.model-description {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.model-list {
+  padding-left: 20px;
+  margin-top: 15px;
+  color: var(--text-color);
+}
+
+.model-list li {
+  margin-bottom: 8px;
+}
+
+.model-note {
+  font-style: italic;
+  margin-top: 15px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 15px;
+  color: var(--text-muted);
+} 

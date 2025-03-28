@@ -1,0 +1,78 @@
+.app-header {
+  background-color: var(--header-bg);
+  box-shadow: 0 2px 4px var(--card-shadow);
+  padding: 15px 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-header.dark-mode {
+  background-color: var(--header-bg);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.milton-logo-text {
+  display: flex;
+  align-items: baseline;
+}
+
+.milton-text {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #4a90e2; /* Color azul para "Milton" */
+  margin-right: 2px;
+}
+
+.academy-text {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--text-muted); /* Color gris para "ACADEMY" */
+  letter-spacing: 1px;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info {
+  text-align: right;
+}
+
+.user-name {
+  font-weight: bold;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.user-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .milton-text {
+    font-size: 1.8rem;
+  }
+  
+  .academy-text {
+    font-size: 1.5rem;
+  }
+  
+  .user-container {
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+} 

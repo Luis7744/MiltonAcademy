@@ -1,0 +1,197 @@
+/* Estructura general */
+.tema-container {
+  background-color: #fff;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb-nav {
+  margin-bottom: 20px;
+}
+
+.breadcrumb-nav a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.breadcrumb-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Título del tema */
+.tema-title {
+  margin-bottom: 20px;
+}
+
+/* Contenedor de las 5 columnas */
+.main-content-row {
+  display: grid;
+  grid-template-columns: 250px 22% 27% 22% 18%;
+  gap: 15px;
+  min-height: 600px;
+}
+
+/* Panel lateral */
+.sidebar-wrapper {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 15px;
+}
+
+/* Estilos para los bloques en el panel lateral */
+.bloque-container {
+  margin-bottom: 10px;
+}
+
+.bloque-header {
+  background-color: #e9ecef;
+  padding: 8px;
+  margin-bottom: 2px;
+  border-radius: 4px;
+}
+
+.bloque-header.active {
+  background-color: #cfe2ff;
+}
+
+.tema-list {
+  padding-left: 15px;
+}
+
+.tema-item {
+  padding: 6px 8px;
+  margin: 2px 0;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.tema-item:hover {
+  background-color: #f0f0f0;
+}
+
+.tema-item.active {
+  background-color: #e3f2fd;
+  color: #0d6efd;
+}
+
+/* Contenedor de las 4 columnas principales */
+.columns-container {
+  grid-column: 2 / -1;
+  display: contents;
+}
+
+/* Cabeceras de las columnas */
+.column-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 15px;
+}
+
+/* Estilos para las columnas individuales */
+.col-objetivo, .col-learning, .col-objetivo2, .col-soporte {
+  padding: 15px;
+  background-color: white;
+}
+
+.col-objetivo, .col-learning, .col-objetivo2 {
+  border-right: 2px dotted #ccc;
+}
+
+/* Estilos para los bloques de contenido */
+.learning-path-item {
+  background-color: #e6e6e6;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+.learning-path-red {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.red-block {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.support-block {
+  background-color: #fff3e0;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Estilos para las listas de conceptos */
+.bullet-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.leccion-contenido {
+  margin-bottom: 15px;
+}
+
+.leccion-contenido h6 {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Conectores del learning path */
+.connector-down {
+  height: 20px;
+  width: 2px;
+  background-color: #666;
+  margin: 0 auto;
+}
+
+.connector-down-arrow {
+  height: 20px;
+  width: 2px;
+  background-color: #d32f2f;
+  margin: 0 auto;
+  position: relative;
+}
+
+.connector-down-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #d32f2f;
+}
+
+/* Estilos para tamaños pequeños */
+@media (max-width: 768px) {
+  .tema-header {
+    grid-template-columns: 1fr;
+  }
+  
+  .tema-title {
+    font-size: 1.5rem;
+  }
+  
+  .learning-path-prerequisites {
+    flex-direction: column;
+  }
+  
+  .learning-path-prerequisites .prerequisite-item {
+    width: 100%;
+  }
+  
+  .support-block {
+    height: auto;
+    padding: 0.5rem;
+  }
+}

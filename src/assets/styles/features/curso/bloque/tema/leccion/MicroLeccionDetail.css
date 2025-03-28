@@ -1,0 +1,234 @@
+/* Estilos generales */
+.microleccion-detail-container {
+  background-color: var(--bg-secondary);
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+/* Panel lateral izquierdo */
+.sidebar-col {
+  padding: 0;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  min-height: calc(100vh - 120px);
+  overflow-y: auto;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.microlecciones-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.leccion-descripcion {
+  padding: 15px;
+  background-color: var(--bg-tertiary);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.microlecciones-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.microleccion-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: var(--text-color);
+}
+
+.microleccion-item:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.microleccion-item.active {
+  background-color: var(--sidebar-active);
+  border-left: 3px solid var(--primary-color);
+}
+
+.microleccion-numero {
+  width: 24px;
+  height: 24px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.microleccion-item.active .microleccion-numero {
+  background-color: var(--primary-color);
+}
+
+.microleccion-titulo {
+  font-size: 0.9rem;
+}
+
+/* Contenido principal */
+.main-content-col {
+  padding: 20px;
+}
+
+.microleccion-content {
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.microleccion-title {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Contenedor de video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporción 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.video-placeholder {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-placeholder p {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+.video-placeholder .text-muted {
+  font-size: 0.8rem;
+}
+
+/* Contenedor de conceptos */
+.conceptos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.concepto-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+.concepto-title {
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+.concepto-list {
+  list-style-type: none;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+
+.concepto-list li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Contenedor de ejercicios */
+.ejercicio-container {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.ejercicio-container h3 {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.ejercicio-enunciado {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.ejercicio-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ejercicio-opcion {
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-color);
+}
+
+.opcion-letra {
+  width: 25px;
+  font-weight: 500;
+}
+
+/* Recursos */
+.recursos-accordion {
+  margin-top: 20px;
+}
+
+.recursos-list {
+  padding-left: 20px;
+  color: var(--text-color);
+}
+
+.recursos-list li {
+  margin-bottom: 8px;
+}
+
+/* Mensaje cuando no hay contenido */
+.no-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background-color: var(--bg-tertiary);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+/* Navegación entre microlecciones */
+.microleccion-navigation {
+  margin-top: 30px;
+}
+
+.microleccion-text {
+  color: var(--text-color);
+  line-height: 1.6;
+} 

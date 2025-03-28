@@ -1,0 +1,173 @@
+/* Estilos generales */
+.tema-detail-container {
+  background-color: var(--bg-secondary);
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+}
+
+/* Panel lateral de bloques */
+.sidebar-col {
+  padding: 0;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  min-height: calc(100vh - 120px);
+  overflow-y: auto;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Contenido principal */
+.main-content-col {
+  padding: 20px;
+}
+
+/* Encabezados de columnas */
+.column-headers {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.objetivo-header, .learning-path-header, .soporte-header {
+  background-color: var(--bg-tertiary);
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+/* Contenido principal con learning path y conceptos */
+.learning-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  gap: 10px;
+}
+
+/* Columnas de conceptos */
+.conceptos-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.concepto-box {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  padding: 15px;
+  height: fit-content;
+}
+
+.concepto-title {
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.concepto-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.concepto-list li {
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+/* Columna central - Learning Path */
+.learning-path-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Nodos iniciales */
+.initial-nodes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.prerequisite-node {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Línea punteada que conecta a los nodos iniciales */
+.dotted-connector {
+  width: 2px;
+  height: 20px;
+  border-left: 2px dashed var(--text-muted);
+  margin: 5px 0;
+}
+
+/* Secuencia de lecciones */
+.learning-sequence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.leccion-node {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  padding: 10px 15px;
+  border-radius: 4px;
+  width: 80%;
+  text-align: center;
+  margin: 5px 0;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: var(--text-color);
+}
+
+.leccion-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--card-shadow);
+  background-color: var(--sidebar-hover);
+}
+
+.leccion-node.active {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+
+.leccion-node.laboratorio {
+  background-color: var(--danger-color);
+  color: white;
+  border-color: var(--danger-color);
+}
+
+.connector-line {
+  width: 2px;
+  height: 20px;
+  background-color: var(--text-muted);
+}
+
+/* Columna de soporte */
+.soporte-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.soporte-block {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+} 

@@ -1,0 +1,230 @@
+/* Estilos generales */
+.tema-detail-container {
+  background-color: #f8f9fa;
+}
+
+/* Panel lateral de bloques */
+.sidebar-col {
+  padding: 0;
+  background-color: #fff;
+  border-right: 1px solid #dee2e6;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.bloques-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.bloque-item {
+  margin-bottom: 5px;
+}
+
+.bloque-header {
+  background-color: #e9ecef;
+  padding: 10px;
+  font-weight: bold;
+  border-left: 4px solid transparent;
+  cursor: pointer;
+}
+
+.bloque-header.active {
+  background-color: #cfe2ff;
+  border-left-color: #0d6efd;
+}
+
+.temas-list {
+  padding-left: 15px;
+}
+
+.tema-item {
+  padding: 8px 10px;
+  margin: 2px 0;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  font-size: 0.9rem;
+}
+
+.tema-item:hover {
+  background-color: #f1f3f5;
+}
+
+.tema-item.active {
+  background-color: #e2e6ea;
+  border-left-color: #6c757d;
+  font-weight: 500;
+}
+
+/* Contenido principal */
+.main-content-col {
+  padding: 20px;
+}
+
+/* Encabezados de columnas */
+.column-headers {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.objetivo-header, .learning-path-header, .soporte-header {
+  background-color: #e9ecef;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Contenido de aprendizaje */
+.learning-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  gap: 10px;
+  min-height: calc(100vh - 250px);
+}
+
+/* Columnas de conceptos */
+.conceptos-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.concepto-box {
+  background-color: #fff;
+  border: 1px dashed #adb5bd;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.concepto-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.concepto-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.concepto-list li {
+  margin-bottom: 3px;
+  line-height: 1.3;
+}
+
+.leccion-highlight {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Columna de learning path */
+.learning-path-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.initial-nodes {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.prerequisite-node {
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  padding: 10px;
+  border-radius: 4px;
+  width: 45%;
+  text-align: center;
+}
+
+.dotted-connector {
+  width: 50px;
+  height: 30px;
+  border-bottom: 2px dashed #6c757d;
+  position: relative;
+}
+
+.dotted-connector:before, .dotted-connector:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 0;
+  border-top: 2px dashed #6c757d;
+  top: 15px;
+}
+
+.dotted-connector:before {
+  right: 50%;
+  transform: rotate(30deg);
+  transform-origin: right bottom;
+}
+
+.dotted-connector:after {
+  left: 50%;
+  transform: rotate(-30deg);
+  transform-origin: left bottom;
+}
+
+.learning-sequence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.leccion-node {
+  background-color: #cfe2ff;
+  border: 1px solid #b6d4fe;
+  padding: 10px 15px;
+  border-radius: 4px;
+  width: 80%;
+  text-align: center;
+  margin: 5px 0;
+  z-index: 1;
+}
+
+.leccion-node.active {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: bold;
+}
+
+.leccion-node.laboratorio {
+  background-color: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.connector-line {
+  width: 2px;
+  height: 20px;
+  background-color: #6c757d;
+}
+
+/* Columna de soporte */
+.soporte-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.soporte-block {
+  background-color: #fff3cd;
+  border: 1px solid #ffecb5;
+  padding: 15px;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 

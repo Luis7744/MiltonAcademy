@@ -1,0 +1,22 @@
+.not-implemented-container {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.construction-icon {
+  font-size: 5rem;
+  color: #ffc107;
+  margin: 30px 0;
+}
+
+.not-implemented-container h1 {
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.not-implemented-container .lead {
+  color: #6c757d;
+  margin-bottom: 30px;
+} 

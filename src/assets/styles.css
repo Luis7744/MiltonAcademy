@@ -1,0 +1,89 @@
+/* Estilos principales */
+
+/* Layout principal */
+.tema-container {
+  padding: 20px;
+}
+
+/* Migas de pan y título */
+.breadcrumb-nav {
+  margin-bottom: 20px;
+}
+
+.tema-title {
+  margin-bottom: 20px;
+}
+
+/* Contenedor de las 5 columnas */
+.main-content-row {
+  display: grid;
+  grid-template-columns: 250px 22% 27% 22% 18%;
+  gap: 15px;
+  min-height: 600px;
+}
+
+/* Panel lateral */
+.sidebar-wrapper {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 15px;
+}
+
+/* Estilos para los bloques en el panel lateral */
+.bloque-container {
+  margin-bottom: 10px;
+}
+
+.bloque-header {
+  background-color: #e9ecef;
+  padding: 8px;
+  margin-bottom: 2px;
+  border-radius: 4px;
+}
+
+.bloque-header.active {
+  background-color: #cfe2ff;
+}
+
+.tema-list {
+  padding-left: 15px;
+}
+
+.tema-item {
+  padding: 6px 8px;
+  margin: 2px 0;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.tema-item:hover {
+  background-color: #f0f0f0;
+}
+
+.tema-item.active {
+  background-color: #e3f2fd;
+  color: #0d6efd;
+}
+
+/* Contenedor de las 4 columnas principales */
+.columns-container {
+  grid-column: 2 / -1;
+  display: contents;
+}
+
+/* Cabeceras de las columnas */
+.column-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 15px;
+}
+
+/* Estilos para las columnas individuales */
+.col-objetivo, .col-learning, .col-objetivo2, .col-soporte {
+  padding: 15px;
+  background-color: white;
+}
+
+/* ... resto de los estilos existentes ... */ 

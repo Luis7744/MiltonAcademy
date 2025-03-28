@@ -1,0 +1,51 @@
+.curso-header {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.curso-description {
+  color: #6c757d;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.curso-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.curso-card .card-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.model-info-container {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.model-list {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.model-list li {
+  margin-bottom: 8px;
+}
+
+.model-note {
+  font-style: italic;
+  margin-top: 15px;
+  border-top: 1px solid #dee2e6;
+  padding-top: 15px;
+} 

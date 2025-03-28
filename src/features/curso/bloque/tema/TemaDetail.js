@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from '../../../../components/header/Header';
 import Footer from '../../../../components/footer/Footer';
 import LateralBloques from '../../../../components/sidebar/LateralBloques';
-import Breadcrumb from '../../../../components/breadcrumb/Breadcrumb';
+import CourseBreadcrumb from '../../../../components/breadcrumb/CourseBreadcrumb';
 import data from "../../../../data/db.json";
 import './TemaDetail.css';
 
@@ -45,31 +45,31 @@ const getPrerequisitos = (data, temaId) => {
 
 // Función para obtener la secuencia de aprendizaje
 const getLearningPath = (data, temaId) => {
-  // En un caso real, esto vendría del JSON
-  // Buscar todas las lecciones del bloque al que pertenece el tema
-  const { bloque } = getTemaByCodigo(data, temaId);
+  const { tema } = getTemaByCodigo(data, temaId);
   
-  if (!bloque) return [];
+  if (!tema || !tema.leccion) return [];
   
-  const learningPath = [];
-  
-  // Recorrer todos los temas del bloque
-  bloque.tema?.forEach(tema => {
-    // Añadir las lecciones de cada tema al learning path
-    tema.leccion?.forEach(leccion => {
-      if (leccion.tipo !== 'concepto' && leccion.tipo !== 'soporte') {
-        learningPath.push(leccion);
-      }
-    });
-  });
-  
-  // Ordenar por código
-  return learningPath.sort((a, b) => {
-    // Extraer números para comparación
-    const numA = parseInt(a.codigo.replace(/\D/g, ''));
-    const numB = parseInt(b.codigo.replace(/\D/g, ''));
-    return numA - numB;
-  });
+  // Si existe path, lo usamos para ordenar las lecciones
+  if (tema.path) {
+    const ordenedLecciones = tema.path
+      .map(pathItem => {
+        const leccion = tema.leccion.find(l => l.codigo === pathItem.codigo);
+        if (leccion) {
+          return {
+            ...leccion,
+            orden: pathItem.orden,
+            dependencia: pathItem.dependencia
+          };
+        }
+        return null;
+      })
+      .filter(l => l !== null);
+
+    return ordenedLecciones;
+  }
+
+  // Si no hay path, retornamos las lecciones en su orden original
+  return tema.leccion;
 };
 
 // Componente para mostrar una lección en el learning path
@@ -81,6 +81,11 @@ function LeccionNode({ leccion, isActive, isLaboratorio, onClick }) {
       style={{ cursor: 'pointer' }}
     >
       {leccion.codigo}. {leccion.descripcion}
+      {leccion.microleccion && leccion.microleccion.length > 0 && (
+        <div className="microlecciones-count">
+          {leccion.microleccion.length} microlecciones
+        </div>
+      )}
     </div>
   );
 }
@@ -224,23 +229,6 @@ function TemaDetail() {
     navigate(`/leccion/${leccionId}`);
   };
 
-  // Construir los elementos de las migas de pan
-  const breadcrumbItems = [];
-  
-  if (bloque) {
-    breadcrumbItems.push({
-      label: `Bloque ${bloque.codigo} - ${bloque.descripcion}`,
-      url: `/bloque/${bloque.codigo}`
-    });
-  }
-  
-  if (tema) {
-    breadcrumbItems.push({
-      label: tema.descripcion,
-      url: `/tema/${tema.codigo}`
-    });
-  }
-  
   return (
     <div className="d-flex flex-column min-vh-100">
       <Header />
@@ -261,7 +249,10 @@ function TemaDetail() {
             {/* Contenido principal */}
             <Col md={9} lg={10} className="main-content-col">
               {/* Migas de pan */}
-              <Breadcrumb items={breadcrumbItems} />
+              <CourseBreadcrumb 
+                bloque={bloque}
+                tema={tema}
+              />
               
               {/* Encabezados de columnas */}
               <div className="column-headers">

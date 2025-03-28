@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Button, Alert } from 'react-bootstrap';
 import Header from '../../../../../components/header/Header';
 import Footer from '../../../../../components/footer/Footer';
-import Breadcrumb from '../../../../../components/breadcrumb/Breadcrumb';
+import CourseBreadcrumb from '../../../../../components/breadcrumb/CourseBreadcrumb';
 import data from '../../../../../data/db.json';
 import '../../../../../assets/styles/features/curso/bloque/tema/leccion/MicroLeccionDetail.css';
 
@@ -109,24 +109,6 @@ function MicroLeccionDetail() {
     );
   }
   
-  // Construir las migas de pan (solo hasta el nivel de lección)
-  const breadcrumbItems = [
-    { label: 'Inicio', path: '/' },
-    { label: 'Cursos', path: '/cursos' },
-    { 
-      label: `Bloque ${bloque.codigo}: ${bloque.descripcion}`, 
-      path: `/bloque/${bloque.codigo}` 
-    },
-    { 
-      label: `${tema.codigo}: ${tema.descripcion}`, 
-      path: `/tema/${tema.codigo}` 
-    },
-    {
-      label: `${leccion.codigo}: ${leccion.descripcion}`,
-      active: true
-    }
-  ];
-  
   // Verificar si hay microlecciones
   const hasMicroLecciones = leccion.microleccion && leccion.microleccion.length > 0;
   const currentMicroLeccion = hasMicroLecciones ? leccion.microleccion[selectedMicroLeccion] : null;
@@ -139,7 +121,12 @@ function MicroLeccionDetail() {
         <Container fluid>
           <Row className="mt-3 mb-3">
             <Col>
-              <Breadcrumb items={breadcrumbItems} />
+              <CourseBreadcrumb 
+                bloque={bloque}
+                tema={tema}
+                leccion={leccion}
+                microleccion={hasMicroLecciones ? currentMicroLeccion : null}
+              />
             </Col>
           </Row>
           

@@ -1,555 +1,1518 @@
-{	
-	"codigo-curso":"tai-2025",
-	"last-update":"20250216",
-	"activo":true,	
-	"bloque":[
-		{
-			"codigo":"b0",
-			"descripcion":"Bloque0. Fundamentos",
-			"tema":[
-				{
-					"codigo":"b0t1",
-					"descripcion":"Fundamentos de informatica",
-					"leccion":[
-						{
-							"codigo":"0101",
-							"descripcion":"Conceptos Generales",
-							"tipo":"teoria",
-							"microleccion":[{},{}]
-						},
-						{
-							"codigo":"0102",
-							"descripcion":"Sistemas Digitales",
-							"tipo":"teoria",
-							"microleccion":[{},{}]
-						}
-					]
-				},
-				{
-					"codigo":"b0t2",
-					"descripcion":"Fundamentos de redes"
-				}
+{
+	"codigo-curso": "tai-2025",
+	"last-update": "20250216",
+	"activo": true,
+	"bloque": [
+	  {
+		"codigo": "b0",
+		"descripcion": "Bloque0. Fundamentos",
+		"tema": [
+		  {
+			"codigo": "b0t1",
+			"descripcion": "Fundamentos de informatica",
+			"leccion": [
+			  {
+				"codigo": "0101",
+				"descripcion": "Conceptos Generales",
+				"tipo": "teoria",
+				"microleccion": [{}, {}]
+			  },
+			  {
+				"codigo": "0102",
+				"descripcion": "Sistemas Digitales",
+				"tipo": "teoria",
+				"microleccion": [{}, {}]
+			  }
 			]
-		},
-		{
-			"codigo":"b1",
-			"descripcion":"Bloque1. Legislación"
-		},
-		{
-			"codigo":"b2",
-			"descripcion":"Bloque2. Tecnología básica"
-		},
-		{
-			"codigo":"b3",
-			"descripcion":"Bloque3. Desarollo de sistemas",
-			"tema":[
-				{
-					"codigo":"b4t7",
-					"descripcion":"El modelo TCP/IP y el modelo de referencia de interconexión de sistemas abiertos (OSI) de ISO. Protocolos TCP/IP",					
-					"dependencia":[
-						{
-							"codigo":"b0t1",
-							"target":"tema",
-							"required":false							
-						},
-						{
-							"codigo":"b0t2",
-							"target":"tema",
-							"required":true							
-						}
-					],
-					"leccion":[
-						{
-							"codigo":"4701",
-							"descripcion":"Modelo OSI",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4702",
-							"descripcion":"La pila TCP/IP",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4703",
-							"descripcion":"Nivel de enlace",
-							"tipo":"teoria"
-						},																		
-						{
-							"codigo":"4704",
-							"descripcion":"Nivel de red. IPv4",	
-							"tipo":"teoria",								
-							"microleccion":[
-								{									
-									"descripcion":"Generalidades",
-									"url-video":"https://youtu.be/pmmKKPrJEDE?si=Wh8VD0wpd-IGH6pt",
-									"concepto":[
-										{
-											"descripcion":"Tipo de Protocolo",
-											"detalle":[
-												{"descripcion":"No orientado a conexion"},
-												{"descripcion":"Paquetes por rutas distintas"},
-												{"descripcion":"No garantiza entrega"}
-											]
-										},
-										{
-											"descripcion":"Direccion IP",
-											"detalle":[
-												{"descripcion":"Concepto y tipos"},
-												{"descripcion":"Formato"}
-											]
-										}
-									]
-								},
-								{									
-									"descripcion":"Campos del datagrama",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Total Length (header + data)",
-											"detalle":[
-												{"descripcion":"Tamaño maximo de un datagrama"}
-											]
-										},
-										{
-											"descripcion":"Protocol",
-											"detalle":[
-												{"descripcion":"¿A quien estamos transportando del nivel superior?"}
-											]
-										},
-										{
-											"descripcion":"TTL",
-											"detalle":[
-												{"descripcion":"Numero de saltos (no tiempo)"},
-												{"descripcion":"¿Qué pasa si ese valor llega a cero?"}
-											]
-										},
-										{
-											"descripcion":"IP Origen",
-											"detalle":[
-												{"descripcion":"¿Puede cambiar?"}
-											]
-										},
-										{
-											"descripcion":"IP Destino",
-											"detalle":[
-												{"descripcion":"Posibles valores"}
-											]
-										}
-									]
-								},
-								{									
-									"descripcion":"Problema de fragmentacion",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Concepto de MTU",
-											"detalle":[
-												{"descripcion":"¿Que pasa si el nivel de enlace no es capaz de transportar tanto tamaño?"}
-											]
-										},
-										{
-											"descripcion":"Campo Fragment Offset",
-											"detalle":[
-												{"descripcion":"Como se reconstruye el datagrama original"}
-											]
-										},
-										{
-											"descripcion":"Campo Flags - MF",
-											"detalle":[
-												{"descripcion":"Posibles valores"}
-											]
-										}
-
-									]									
-								},
-								{									
-									"descripcion":"Tipos de redes / Direccionamiento",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Modelo classful",
-											"detalle":[
-												{"descripcion":"Concepto de Mascara de red"},
-												{"descripcion":"Clases A,B y C"},
-												{"descripcion":"Grupos Multicast"}
-											]
-										},
-										{
-											"descripcion":"Modelo classless",
-											"detalle":[
-												{"descripcion":"Concepto de CIDR"}
-											]
-										}
-
-									]									
-								},
-								{									
-									"descripcion":"Subnetting FLSM",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Concepto de mascara de subred",
-											"detalle":[
-												{"descripcion":"Mecanismo de tomar prestados bits"}
-											]
-										}
-									]									
-								},
-								{									
-									"descripcion":"Concepto de NAT",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Source NAT",
-											"detalle":[
-												{"descripcion":"Caso de uso"}
-											]
-										},
-										{
-											"descripcion":"Destination NAT",
-											"detalle":[
-												{"descripcion":"Caso de uso"}
-											]
-										}
-
-									]									
-								}								
-							]
-						},
-						{
-							"codigo":"4705",
-							"descripcion":"Nivel de red. IPv6",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4706",
-							"descripcion":"Nivel de red. Routing",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4707",
-							"descripcion":"Nivel de transporte. UDP vs TCP",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4708",
-							"descripcion":"Nivel de aplicacion. FTP",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"L4704",
-							"descripcion":"Ejercicios de IPv4",
-							"tipo":"teoria",
-							"microleccion":[{},{}]
-						}
-					],
-					"path":[
-						{
-							"codigo": "4701",
-							"orden":1					
-						},
-						{
-							"codigo": "4702",
-							"orden":2					
-						},
-						{
-							"codigo": "4703",
-							"orden":3					
-						},
-						{
-							"codigo": "4704",
-							"orden":4,
-							"dependencia":[
-								{
-									"codigo":"L4704",
-									"target":"leccion",
-									"required":true							
-								}
-							]					
-						},
-						{
-							"codigo": "4705",
-							"orden":5					
-						},
-						{
-							"codigo": "4706",
-							"orden":6					
-						},
-						{
-							"codigo": "4707",
-							"orden":7			
-						},
-						{
-							"codigo": "4708",
-							"orden":8					
-						},
-						{
-							"codigo": "4709",
-							"orden":9					
-						}
-					]
-				},
-				{
-					"codigo":"b4t8",
-					"descripcion":"Internet: arquitectura de red. Origen, evolución y estado actual. Principales servicios. Protocolos HTTP, HTTPS y SSL/TLS"
-				}
+		  },
+		  {
+			"codigo": "b0t2",
+			"descripcion": "Fundamentos de redes",
+			"leccion": [
+			  {
+				"codigo": "b0t2l1",
+				"descripcion": "Introducción a redes informáticas",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Conceptos básicos y tipologías de red"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b0t2l2",
+				"descripcion": "Principales protocolos y herramientas de red",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Estructura de protocolos y utilidad de herramientas de diagnóstico"
+				  }
+				]
+			  }
 			]
-		},
-		{
-			"codigo":"b4",
-			"descripcion":"Bloque4. Sistemas y comunicaciones",
-			"tema":[
-				{
-					"codigo":"b4t7",
-					"descripcion":"El modelo TCP/IP y el modelo de referencia de interconexión de sistemas abiertos (OSI) de ISO. Protocolos TCP/IP",					
-					"dependencia":[
-						{
-							"codigo":"b0t1",
-							"target":"tema",
-							"required":false							
-						},
-						{
-							"codigo":"b0t2",
-							"target":"tema",
-							"required":true							
-						}
-					],
-					"leccion":[
-						{
-							"codigo":"4701",
-							"descripcion":"Modelo OSI",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4702",
-							"descripcion":"La pila TCP/IP",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4703",
-							"descripcion":"Nivel de enlace",
-							"tipo":"teoria"
-						},																		
-						{
-							"codigo":"4704",
-							"descripcion":"Nivel de red. IPv4",	
-							"tipo":"teoria",								
-							"microleccion":[
-								{									
-									"descripcion":"Generalidades",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Tipo de Protocolo",
-											"detalle":[
-												{"descripcion":"No orientado a conexion"},
-												{"descripcion":"Paquetes por rutas distintas"},
-												{"descripcion":"No garantiza entrega"}
-											]
-										},
-										{
-											"descripcion":"Direccion IP",
-											"detalle":[
-												{"descripcion":"Concepto y tipos"},
-												{"descripcion":"Formato"}
-											]
-										}
-									]
-								},
-								{									
-									"descripcion":"Campos del datagrama",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Total Length (header + data)",
-											"detalle":[
-												{"descripcion":"Tamaño maximo de un datagrama"}
-											]
-										},
-										{
-											"descripcion":"Protocol",
-											"detalle":[
-												{"descripcion":"¿A quien estamos transportando del nivel superior?"}
-											]
-										},
-										{
-											"descripcion":"TTL",
-											"detalle":[
-												{"descripcion":"Numero de saltos (no tiempo)"},
-												{"descripcion":"¿Qué pasa si ese valor llega a cero?"}
-											]
-										},
-										{
-											"descripcion":"IP Origen",
-											"detalle":[
-												{"descripcion":"¿Puede cambiar?"}
-											]
-										},
-										{
-											"descripcion":"IP Destino",
-											"detalle":[
-												{"descripcion":"Posibles valores"}
-											]
-										}
-									]
-								},
-								{									
-									"descripcion":"Problema de fragmentacion",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Concepto de MTU",
-											"detalle":[
-												{"descripcion":"¿Que pasa si el nivel de enlace no es capaz de transportar tanto tamaño?"}
-											]
-										},
-										{
-											"descripcion":"Campo Fragment Offset",
-											"detalle":[
-												{"descripcion":"Como se reconstruye el datagrama original"}
-											]
-										},
-										{
-											"descripcion":"Campo Flags - MF",
-											"detalle":[
-												{"descripcion":"Posibles valores"}
-											]
-										}
-
-									]									
-								},
-								{									
-									"descripcion":"Tipos de redes / Direccionamiento",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Modelo classful",
-											"detalle":[
-												{"descripcion":"Concepto de Mascara de red"},
-												{"descripcion":"Clases A,B y C"},
-												{"descripcion":"Grupos Multicast"}
-											]
-										},
-										{
-											"descripcion":"Modelo classless",
-											"detalle":[
-												{"descripcion":"Concepto de CIDR"}
-											]
-										}
-
-									]									
-								},
-								{									
-									"descripcion":"Subnetting FLSM",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Concepto de mascara de subred",
-											"detalle":[
-												{"descripcion":"Mecanismo de tomar prestados bits"}
-											]
-										}
-									]									
-								},
-								{									
-									"descripcion":"Concepto de NAT",
-									"url-video":"http://vimeo.com/XXXXXXXXX",
-									"concepto":[
-										{
-											"descripcion":"Source NAT",
-											"detalle":[
-												{"descripcion":"Caso de uso"}
-											]
-										},
-										{
-											"descripcion":"Destination NAT",
-											"detalle":[
-												{"descripcion":"Caso de uso"}
-											]
-										}
-
-									]									
-								}								
-							]
-						},
-						{
-							"codigo":"4705",
-							"descripcion":"Nivel de red. IPv6",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4706",
-							"descripcion":"Nivel de red. Routing",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4707",
-							"descripcion":"Nivel de transporte. UDP vs TCP",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"4708",
-							"descripcion":"Nivel de aplicacion. FTP",
-							"tipo":"teoria"
-						},
-						{
-							"codigo":"L4704",
-							"descripcion":"Ejercicios de IPv4",
-							"tipo":"teoria",
-							"microleccion":[{},{}]
-						}
-					],
-					"path":[
-						{
-							"codigo": "4701",
-							"orden":1					
-						},
-						{
-							"codigo": "4702",
-							"orden":2					
-						},
-						{
-							"codigo": "4703",
-							"orden":3					
-						},
-						{
-							"codigo": "4704",
-							"orden":4,
-							"dependencia":[
-								{
-									"codigo":"L4704",
-									"target":"leccion",
-									"required":true							
-								}
-							]					
-						},
-						{
-							"codigo": "4705",
-							"orden":5					
-						},
-						{
-							"codigo": "4706",
-							"orden":6					
-						},
-						{
-							"codigo": "4707",
-							"orden":7			
-						},
-						{
-							"codigo": "4708",
-							"orden":8					
-						},
-						{
-							"codigo": "4709",
-							"orden":9					
-						}
-					]
-				},
-				{
-					"codigo":"b4t8",
-					"descripcion":"Internet: arquitectura de red. Origen, evolución y estado actual. Principales servicios. Protocolos HTTP, HTTPS y SSL/TLS"
-				}
+		  }
+		]
+	  },
+	  {
+		"codigo": "b1",
+		"descripcion": "Bloque1. Organización del Estado y Administración electrónica",
+		"tema": [
+		  {
+			"codigo": "b1t1",
+			"descripcion": "La Constitución Española de 1978. Derechos y deberes fundamentales. Su garantía y suspensión. La Corona: funciones constitucionales del Rey.",
+			"leccion": [
+			  {
+				"codigo": "b1t1l1",
+				"descripcion": "Estructura y fundamentos de la Constitución",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Síntesis de los títulos y artículos principales"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b1t1l2",
+				"descripcion": "Garantías constitucionales y papel de la Corona",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Funciones del Rey y mecanismos de suspensión de derechos"
+				  }
+				]
+			  }
 			]
-		}
+		  },
+		  {
+			"codigo": "b1t2",
+			"descripcion": "Las Cortes Generales: atribuciones del Congreso de los Diputados y del Senado. El Tribunal Constitucional: composición y atribuciones. El Defensor del Pueblo.",
+			"leccion": [
+			  {
+				"codigo": "b1t2l1",
+				"descripcion": "Estructura y competencias de las Cortes Generales",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Congreso de los Diputados y Senado: diferencias y funcionamiento"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b1t2l2",
+				"descripcion": "Organismos de control: Tribunal Constitucional y Defensor del Pueblo",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Composición, atribuciones e influencia en la garantía de derechos"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b1t3",
+			"descripcion": "El Gobierno: composición, nombramiento y cese. Las funciones del Gobierno. Relaciones entre el Gobierno y las Cortes Generales.",
+			"leccion": [
+			  {
+				"codigo": "b1t3l1",
+				"descripcion": "La formación del Gobierno",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Nombramiento, cese y estructura de los ministerios"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b1t3l2",
+				"descripcion": "Relaciones Gobierno-Cortes Generales",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Control parlamentario: mociones y sesiones de control"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b1t4",
+			"descripcion": "El texto refundido del Estatuto Básico del Empleo Público y demás normativa de aplicación: derechos y deberes, formas de provisión de puestos, promoción interna y carrera profesional; situaciones administrativas, incompatibilidades y régimen sancionador. La Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno. La Agenda 2030 y los Objetivos de Desarrollo Sostenible.",
+			"leccion": [
+			  {
+				"codigo": "b1t4l1",
+				"descripcion": "Estatuto Básico del Empleo Público: conceptos clave",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Derechos, deberes y formas de provisión de puestos"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b1t4l2",
+				"descripcion": "Ley de transparencia y Agenda 2030",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Obligaciones de publicidad activa y Objetivos de Desarrollo Sostenible"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b1t5",
+			"descripcion": "Políticas de igualdad y contra la violencia de género. Políticas de igualdad de trato y no discriminación de las personas LGTBI. Discapacidad y dependencia: régimen jurídico.",
+			"leccion": [
+			  {
+				"codigo": "b1t5l1",
+				"descripcion": "Marco legal de la igualdad y la no discriminación",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Principales leyes de igualdad y protección de colectivos vulnerables"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b1t5l2",
+				"descripcion": "Discapacidad y dependencia",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Régimen jurídico y recursos de apoyo"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b1t6",
+			"descripcion": "La sociedad de la información. Identidad y firma electrónica: régimen jurídico. El DNI electrónico. La Agenda Digital para España.",
+			"leccion": [
+			  {
+				"codigo": "b1t6l1",
+				"descripcion": "Conceptos de sociedad de la información",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Transformación digital y servicios electrónicos"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b1t6l2",
+				"descripcion": "Firma electrónica y DNI electrónico",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Tecnologías subyacentes y validez legal"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b1t7",
+			"descripcion": "La protección de datos personales y su régimen jurídico: principios, derechos y obligaciones. Derechos digitales.",
+			"leccion": [
+			  {
+				"codigo": "b1t7l1",
+				"descripcion": "Principios y normativa de protección de datos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "RGPD y LOPDGDD: bases y principios clave"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b1t7l2",
+				"descripcion": "Derechos digitales y obligaciones",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Ejercicio de derechos de acceso, rectificación, supresión, etc."
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b1t8",
+			"descripcion": "Acceso electrónico de los ciudadanos a los servicios públicos y normativa de desarrollo. La gestión electrónica de los procedimientos administrativos: registros, notificaciones y uso de medios electrónicos. Esquema Nacional de Seguridad y de Interoperabilidad. Normas técnicas de Interoperabilidad.",
+			"leccion": [
+			  {
+				"codigo": "b1t8l1",
+				"descripcion": "Administración electrónica: características y herramientas",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Procedimientos digitales y plataformas de tramitación"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b1t8l2",
+				"descripcion": "Esquema Nacional de Seguridad y de Interoperabilidad",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Objetivos, principios y Normas Técnicas"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b1t9",
+			"descripcion": "Instrumentos para el acceso electrónico a las Administraciones públicas: sedes electrónicas, canales y puntos de acceso, identificación y autenticación. Infraestructuras y servicios comunes en materia de administración electrónica.",
+			"leccion": [
+			  {
+				"codigo": "b1t9l1",
+				"descripcion": "Sedes electrónicas y canales de acceso",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Requisitos de identificación y servicios ofrecidos"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b1t9l2",
+				"descripcion": "Servicios comunes de la Administración electrónica",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Infraestructuras de intercambio e interoperabilidad"
+				  }
+				]
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"codigo": "b2",
+		"descripcion": "Bloque2. Tecnología básica",
+		"tema": [
+		  {
+			"codigo": "b2t1",
+			"descripcion": "Informática básica. Representación y comunicación de la información: elementos constitutivos de un sistema de información. Características y funciones. Arquitectura de ordenadores. Componentes internos de los equipos microinformáticos.",
+			"leccion": [
+			  {
+				"codigo": "b2t1l1",
+				"descripcion": "Fundamentos de la arquitectura de ordenadores",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Componentes principales y su interacción"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b2t1l2",
+				"descripcion": "Comunicación de la información en los sistemas",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Codificación de datos y protocolos básicos"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b2t2",
+			"descripcion": "Periféricos: conectividad y administración. Elementos de impresión. Elementos de almacenamiento. Elementos de visualización y digitalización.",
+			"leccion": [
+			  {
+				"codigo": "b2t2l1",
+				"descripcion": "Periféricos de entrada y salida",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Escáneres, impresoras y dispositivos de visualización"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b2t2l2",
+				"descripcion": "Sistemas de almacenamiento",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Discos duros, SSD y almacenamiento en red"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b2t3",
+			"descripcion": "Tipos abstractos y Estructuras de datos. Organizaciones de ficheros. Algoritmos. Formatos de información y ficheros.",
+			"leccion": [
+			  {
+				"codigo": "b2t3l1",
+				"descripcion": "Estructuras de datos y algoritmos básicos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Listas, pilas y colas, y ejemplos de uso"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b2t3l2",
+				"descripcion": "Organización de ficheros y formatos de información",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Ficheros secuenciales, indexados y en bases de datos"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b2t4",
+			"descripcion": "Sistemas operativos. Características y elementos constitutivos. Sistemas Windows. Sistemas Unix y Linux. Sistemas operativos para dispositivos móviles.",
+			"leccion": [
+			  {
+				"codigo": "b2t4l1",
+				"descripcion": "Introducción a sistemas operativos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Gestión de procesos, memoria y almacenamiento"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b2t4l2",
+				"descripcion": "Principales familias de sistemas operativos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Windows, Linux/Unix y sistemas móviles"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b2t5",
+			"descripcion": "Sistemas de gestión de bases de datos relacionales, orientados a objetos y NoSQL: características y componentes.",
+			"leccion": [
+			  {
+				"codigo": "b2t5l1",
+				"descripcion": "Bases de datos relacionales y orientadas a objetos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Modelos de datos y lenguajes de consulta"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b2t5l2",
+				"descripcion": "Bases de datos NoSQL",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Ventajas, limitaciones y tipos de NoSQL"
+				  }
+				]
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"codigo": "b3",
+		"descripcion": "Bloque3. Desarollo de sistemas",
+		"tema": [
+		  {
+			"codigo": "b4t7",
+			"descripcion": "El modelo TCP/IP y el modelo de referencia de interconexión de sistemas abiertos (OSI) de ISO. Protocolos TCP/IP",
+			"objetivo": "Comprender los modelos de red y protocolos TCP/IP",
+			"soporte": {
+			  "ayuda": "Modelos de red y protocolos",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"dependencia": [
+			  {
+				"codigo": "b0t1",
+				"target": "tema",
+				"required": false
+			  },
+			  {
+				"codigo": "b0t2",
+				"target": "tema",
+				"required": true
+			  }
+			],
+			"leccion": [
+			  {
+				"codigo": "4701",
+				"descripcion": "Modelo OSI",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4702",
+				"descripcion": "La pila TCP/IP",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4703",
+				"descripcion": "Nivel de enlace",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4704",
+				"descripcion": "Nivel de red. IPv4",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Generalidades",
+					"url-video": "https://youtu.be/pmmKKPrJEDE?si=Wh8VD0wpd-IGH6pt",
+					"concepto": [
+					  {
+						"descripcion": "Tipo de Protocolo",
+						"detalle": [
+						  { "descripcion": "No orientado a conexion" },
+						  { "descripcion": "Paquetes por rutas distintas" },
+						  { "descripcion": "No garantiza entrega" }
+						]
+					  },
+					  {
+						"descripcion": "Direccion IP",
+						"detalle": [
+						  { "descripcion": "Concepto y tipos" },
+						  { "descripcion": "Formato" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Campos del datagrama",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Total Length (header + data)",
+						"detalle": [
+						  { "descripcion": "Tamaño maximo de un datagrama" }
+						]
+					  },
+					  {
+						"descripcion": "Protocol",
+						"detalle": [
+						  {
+							"descripcion": "¿A quien estamos transportando del nivel superior?"
+						  }
+						]
+					  },
+					  {
+						"descripcion": "TTL",
+						"detalle": [
+						  { "descripcion": "Numero de saltos (no tiempo)" },
+						  { "descripcion": "¿Qué pasa si ese valor llega a cero?" }
+						]
+					  },
+					  {
+						"descripcion": "IP Origen",
+						"detalle": [
+						  { "descripcion": "¿Puede cambiar?" }
+						]
+					  },
+					  {
+						"descripcion": "IP Destino",
+						"detalle": [
+						  { "descripcion": "Posibles valores" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Problema de fragmentacion",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Concepto de MTU",
+						"detalle": [
+						  {
+							"descripcion": "¿Que pasa si el nivel de enlace no es capaz de transportar tanto tamaño?"
+						  }
+						]
+					  },
+					  {
+						"descripcion": "Campo Fragment Offset",
+						"detalle": [
+						  { "descripcion": "Como se reconstruye el datagrama original" }
+						]
+					  },
+					  {
+						"descripcion": "Campo Flags - MF",
+						"detalle": [
+						  { "descripcion": "Posibles valores" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Tipos de redes / Direccionamiento",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Modelo classful",
+						"detalle": [
+						  { "descripcion": "Concepto de Mascara de red" },
+						  { "descripcion": "Clases A,B y C" },
+						  { "descripcion": "Grupos Multicast" }
+						]
+					  },
+					  {
+						"descripcion": "Modelo classless",
+						"detalle": [
+						  { "descripcion": "Concepto de CIDR" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Subnetting FLSM",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Concepto de mascara de subred",
+						"detalle": [
+						  { "descripcion": "Mecanismo de tomar prestados bits" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Concepto de NAT",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Source NAT",
+						"detalle": [
+						  { "descripcion": "Caso de uso" }
+						]
+					  },
+					  {
+						"descripcion": "Destination NAT",
+						"detalle": [
+						  { "descripcion": "Caso de uso" }
+						]
+					  }
+					]
+				  }
+				]
+			  },
+			  {
+				"codigo": "4705",
+				"descripcion": "Nivel de red. IPv6",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4706",
+				"descripcion": "Nivel de red. Routing",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4707",
+				"descripcion": "Nivel de transporte. UDP vs TCP",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4708",
+				"descripcion": "Nivel de aplicacion. FTP",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "L4704",
+				"descripcion": "Ejercicios de IPv4",
+				"tipo": "teoria",
+				"microleccion": [{}, {}]
+			  }
+			],
+			"path": [
+			  {
+				"codigo": "4701",
+				"orden": 1
+			  },
+			  {
+				"codigo": "4702",
+				"orden": 2
+			  },
+			  {
+				"codigo": "4703",
+				"orden": 3
+			  },
+			  {
+				"codigo": "4704",
+				"orden": 4,
+				"dependencia": [
+				  {
+					"codigo": "L4704",
+					"target": "leccion",
+					"required": true
+				  }
+				]
+			  },
+			  {
+				"codigo": "4705",
+				"orden": 5
+			  },
+			  {
+				"codigo": "4706",
+				"orden": 6
+			  },
+			  {
+				"codigo": "4707",
+				"orden": 7
+			  },
+			  {
+				"codigo": "4708",
+				"orden": 8
+			  },
+			  {
+				"codigo": "4709",
+				"orden": 9
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t8",
+			"descripcion": "Internet: arquitectura de red. Origen, evolución y estado actual. Principales servicios. Protocolos HTTP, HTTPS y SSL/TLS",
+			"leccion": [
+			  {
+				"codigo": "b4t8l1",
+				"descripcion": "Historia de Internet y evolución de servicios",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Principales hitos y transformación de servicios en la red"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t8l2",
+				"descripcion": "Protocolos web y seguridad en la capa de aplicación",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "HTTP, HTTPS y uso de SSL/TLS"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b3t1",
+			"descripcion": "Modelado de datos, metodologías y reglas. Entidades, atributos y relaciones. Diseño de bases de datos. Diseño lógico y físico. El modelo lógico relacional. Normalización.",
+			"leccion": [
+			  {
+				"codigo": "b3t1l1",
+				"descripcion": "Conceptos de modelado de datos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Entidades, atributos y claves primarias"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b3t1l2",
+				"descripcion": "Normalización y diseño lógico",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Formas normales y optimización de estructuras"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b3t2",
+			"descripcion": "Lenguajes de programación. Representación de tipos de datos. Operadores. Instrucciones condicionales. Bucles y recursividad. Procedimientos, funciones y parámetros. Vectores y registros. Estructura de un programa.",
+			"leccion": [
+			  {
+				"codigo": "b3t2l1",
+				"descripcion": "Estructura básica de un lenguaje de programación",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Tipos de datos, operadores y control de flujo"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b3t2l2",
+				"descripcion": "Procedimientos y funciones",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Parámetros, recursividad y uso de vectores"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b3t3",
+			"descripcion": "Lenguajes de interrogación de bases de datos. Estándar ANSI SQL. Procedimientos almacenados. Eventos y disparadores.",
+			"leccion": [
+			  {
+				"codigo": "b3t3l1",
+				"descripcion": "Consultas SQL y sintaxis básica",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "SELECT, JOIN y manipulación de datos"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b3t3l2",
+				"descripcion": "Procedimientos, disparadores y eventos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Automatización y lógica de negocio en el SGBD"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b3t4",
+			"descripcion": "Diseño y programación orientada a objetos. Elementos y componentes software: objetos, clases, herencia, métodos, sobrecarga. Ventajas e inconvenientes. Patrones de diseño y lenguaje de modelado unificado (UML).",
+			"leccion": [
+			  {
+				"codigo": "b3t4l1",
+				"descripcion": "Fundamentos de la orientación a objetos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Objetos, clases y herencia en el ciclo de desarrollo"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b3t4l2",
+				"descripcion": "Patrones de diseño y UML",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Principales patrones (Singleton, Factory) y diagramas UML"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b3t5",
+			"descripcion": "Arquitectura Java EE/Jakarta EE y plataforma.NET: componentes, persistencia y seguridad. Características, elementos, lenguajes y funciones en ambos entornos. Desarrollo de Interfaces.",
+			"leccion": [
+			  {
+				"codigo": "b3t5l1",
+				"descripcion": "Introducción a Java EE/Jakarta EE y .NET",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Componentes principales y modelos de seguridad"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b3t5l2",
+				"descripcion": "Desarrollo de interfaces y persistencia",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Frameworks de interfaz y conexiones a base de datos"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b3t6",
+			"descripcion": "Arquitectura de sistemas cliente/servidor y multicapas: componentes y operación. Arquitecturas de servicios web y protocolos asociados.",
+			"leccion": [
+			  {
+				"codigo": "b3t6l1",
+				"descripcion": "Modelo cliente/servidor y patrones multicapas",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Distribución lógica y física de componentes"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b3t6l2",
+				"descripcion": "Servicios web y protocolos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "SOAP, REST y su implementación"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b3t7",
+			"descripcion": "Aplicaciones web. Desarrollo web front-end y en servidor, multiplataforma y multidispositivo. Lenguajes: HTML, XML y sus derivaciones. Navegadores y lenguajes de programación web. Lenguajes de script.",
+			"leccion": [
+			  {
+				"codigo": "b3t7l1",
+				"descripcion": "Desarrollo front-end",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "HTML, CSS y frameworks de diseño responsivo"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b3t7l2",
+				"descripcion": "Lenguajes de script y programación en servidor",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "JavaScript, Python, PHP y servidores web"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b3t8",
+			"descripcion": "Accesibilidad, diseño universal y usabilidad. Acceso y usabilidad de las tecnologías, productos y servicios relacionados con la sociedad de la información. Confidencialidad y disponibilidad de la información en puestos de usuario final. Conceptos de seguridad en el desarrollo de los sistemas.",
+			"leccion": [
+			  {
+				"codigo": "b3t8l1",
+				"descripcion": "Usabilidad y diseño universal",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Normativas de accesibilidad y WCAG"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b3t8l2",
+				"descripcion": "Seguridad y confidencialidad en el desarrollo",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Buenas prácticas y metodologías seguras"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b3t9",
+			"descripcion": "Repositorios: estructura y actualización. Generación de código y documentación. Metodologías de desarrollo. Pruebas. Programas para control de versiones. Plataformas de desarrollo colaborativo de software.",
+			"leccion": [
+			  {
+				"codigo": "b3t9l1",
+				"descripcion": "Control de versiones y repositorios",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Git, SVN y buenas prácticas en equipos"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b3t9l2",
+				"descripcion": "Metodologías de desarrollo y pruebas",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Agile, integración continua y calidad de software"
+				  }
+				]
+			  }
+			]
+		  }
+		]
+	  },
+	  {
+		"codigo": "b4",
+		"descripcion": "Bloque4. Sistemas y comunicaciones",
+		"tema": [
+		  {
+			"codigo": "b4t7",
+			"descripcion": "El modelo TCP/IP y el modelo de referencia de interconexión de sistemas abiertos (OSI) de ISO. Protocolos TCP/IP",
+			"objetivo": "Comprender los modelos de red y protocolos TCP/IP",
+			"soporte": {
+			  "ayuda": "Modelos de red y protocolos",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"dependencia": [
+			  {
+				"codigo": "b0t1",
+				"target": "tema",
+				"required": false
+			  },
+			  {
+				"codigo": "b0t2",
+				"target": "tema",
+				"required": true
+			  }
+			],
+			"leccion": [
+			  {
+				"codigo": "4701",
+				"descripcion": "Modelo OSI",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4702",
+				"descripcion": "La pila TCP/IP",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4703",
+				"descripcion": "Nivel de enlace",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4704",
+				"descripcion": "Nivel de red. IPv4",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"descripcion": "Generalidades",
+					"url-video": "https://youtu.be/pmmKKPrJEDE?si=Wh8VD0wpd-IGH6pt",
+					"concepto": [
+					  {
+						"descripcion": "Tipo de Protocolo",
+						"detalle": [
+						  { "descripcion": "No orientado a conexion" },
+						  { "descripcion": "Paquetes por rutas distintas" },
+						  { "descripcion": "No garantiza entrega" }
+						]
+					  },
+					  {
+						"descripcion": "Direccion IP",
+						"detalle": [
+						  { "descripcion": "Concepto y tipos" },
+						  { "descripcion": "Formato" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Campos del datagrama",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Total Length (header + data)",
+						"detalle": [
+						  { "descripcion": "Tamaño maximo de un datagrama" }
+						]
+					  },
+					  {
+						"descripcion": "Protocol",
+						"detalle": [
+						  {
+							"descripcion": "¿A quien estamos transportando del nivel superior?"
+						  }
+						]
+					  },
+					  {
+						"descripcion": "TTL",
+						"detalle": [
+						  { "descripcion": "Numero de saltos (no tiempo)" },
+						  { "descripcion": "¿Qué pasa si ese valor llega a cero?" }
+						]
+					  },
+					  {
+						"descripcion": "IP Origen",
+						"detalle": [
+						  { "descripcion": "¿Puede cambiar?" }
+						]
+					  },
+					  {
+						"descripcion": "IP Destino",
+						"detalle": [
+						  { "descripcion": "Posibles valores" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Problema de fragmentacion",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Concepto de MTU",
+						"detalle": [
+						  {
+							"descripcion": "¿Que pasa si el nivel de enlace no es capaz de transportar tanto tamaño?"
+						  }
+						]
+					  },
+					  {
+						"descripcion": "Campo Fragment Offset",
+						"detalle": [
+						  { "descripcion": "Como se reconstruye el datagrama original" }
+						]
+					  },
+					  {
+						"descripcion": "Campo Flags - MF",
+						"detalle": [
+						  { "descripcion": "Posibles valores" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Tipos de redes / Direccionamiento",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Modelo classful",
+						"detalle": [
+						  { "descripcion": "Concepto de Mascara de red" },
+						  { "descripcion": "Clases A,B y C" },
+						  { "descripcion": "Grupos Multicast" }
+						]
+					  },
+					  {
+						"descripcion": "Modelo classless",
+						"detalle": [
+						  { "descripcion": "Concepto de CIDR" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Subnetting FLSM",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Concepto de mascara de subred",
+						"detalle": [
+						  { "descripcion": "Mecanismo de tomar prestados bits" }
+						]
+					  }
+					]
+				  },
+				  {
+					"descripcion": "Concepto de NAT",
+					"url-video": "http://vimeo.com/XXXXXXXXX",
+					"concepto": [
+					  {
+						"descripcion": "Source NAT",
+						"detalle": [
+						  { "descripcion": "Caso de uso" }
+						]
+					  },
+					  {
+						"descripcion": "Destination NAT",
+						"detalle": [
+						  { "descripcion": "Caso de uso" }
+						]
+					  }
+					]
+				  }
+				]
+			  },
+			  {
+				"codigo": "4705",
+				"descripcion": "Nivel de red. IPv6",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4706",
+				"descripcion": "Nivel de red. Routing",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4707",
+				"descripcion": "Nivel de transporte. UDP vs TCP",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "4708",
+				"descripcion": "Nivel de aplicacion. FTP",
+				"tipo": "teoria"
+			  },
+			  {
+				"codigo": "L4704",
+				"descripcion": "Ejercicios de IPv4",
+				"tipo": "teoria",
+				"microleccion": [{}, {}]
+			  }
+			],
+			"path": [
+			  {
+				"codigo": "4701",
+				"orden": 1
+			  },
+			  {
+				"codigo": "4702",
+				"orden": 2
+			  },
+			  {
+				"codigo": "4703",
+				"orden": 3
+			  },
+			  {
+				"codigo": "4704",
+				"orden": 4,
+				"dependencia": [
+				  {
+					"codigo": "L4704",
+					"target": "leccion",
+					"required": true
+				  }
+				]
+			  },
+			  {
+				"codigo": "4705",
+				"orden": 5
+			  },
+			  {
+				"codigo": "4706",
+				"orden": 6
+			  },
+			  {
+				"codigo": "4707",
+				"orden": 7
+			  },
+			  {
+				"codigo": "4708",
+				"orden": 8
+			  },
+			  {
+				"codigo": "4709",
+				"orden": 9
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t8",
+			"descripcion": "Internet: arquitectura de red. Origen, evolución y estado actual. Principales servicios. Protocolos HTTP, HTTPS y SSL/TLS",
+			"objetivo": "Entender la arquitectura de Internet y sus protocolos",
+			"soporte": {
+			  "ayuda": "Internet y protocolos web",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"leccion": [
+			  {
+				"codigo": "b4t8l1",
+				"descripcion": "Historia de Internet y evolución de servicios",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t8l1m1",
+					"descripcion": "Principales hitos y transformación de servicios en la red"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t8l2",
+				"descripcion": "Protocolos web y seguridad en la capa de aplicación",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t8l2m1",
+					"descripcion": "HTTP, HTTPS y uso de SSL/TLS"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t1",
+			"descripcion": "Administración del Sistema operativo y software de base. Actualización, mantenimiento y reparación del sistema operativo.",
+			"objetivo": "Aprender administración y mantenimiento de sistemas operativos",
+			"soporte": {
+			  "ayuda": "Administración de sistemas operativos",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"leccion": [
+			  {
+				"codigo": "b4t1l1",
+				"descripcion": "Instalación y configuración inicial",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t1l1m1",
+					"descripcion": "Pasos para la instalación y requisitos del sistema"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t1l2",
+				"descripcion": "Mantenimiento y reparación",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t1l2m1",
+					"descripcion": "Procedimientos de actualización y restauración del SO"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t2",
+			"descripcion": "Administración de bases de datos. Sistemas de almacenamiento y su virtualización. Políticas, sistemas y procedimientos de backup y su recuperación. Backup de sistemas físicos y virtuales. Virtualización de sistemas y virtualización de puestos de usuario.",
+			"objetivo": "Comprender administración de bases de datos y virtualización",
+			"soporte": {
+			  "ayuda": "Administración de BD y virtualización",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"leccion": [
+			  {
+				"codigo": "b4t2l1",
+				"descripcion": "Gestión de bases de datos y administración básica",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t2l1m1",
+					"descripcion": "Creación de usuarios, copias de seguridad y restauración"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t2l2",
+				"descripcion": "Virtualización y backup de sistemas",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t2l2m1",
+					"descripcion": "Tipos de virtualización y estrategias de backup"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t3",
+			"descripcion": "Administración de servidores de correo electrónico sus protocolos. Administración de contenedores y microservicios.",
+			"objetivo": "Aprender administración de servicios de correo y contenedores",
+			"soporte": {
+			  "ayuda": "Servidores de correo y contenedores",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"leccion": [
+			  {
+				"codigo": "b4t3l1",
+				"descripcion": "Servidores de correo y protocolos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t3l1m1",
+					"descripcion": "SMTP, IMAP y POP3, configuración y seguridad"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t3l2",
+				"descripcion": "Contenedores y microservicios",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t3l2m1",
+					"descripcion": "Docker, Kubernetes y despliegues escalables"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t4",
+			"descripcion": "Administración de redes de área local. Gestión de usuarios. Gestión de dispositivos. Monitorización y control de tráfico.",
+			"objetivo": "Entender administración de redes locales",
+			"soporte": {
+			  "ayuda": "Administración de redes LAN",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"leccion": [
+			  {
+				"codigo": "b4t4l1",
+				"descripcion": "Conceptos de LAN y gestión de usuarios",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t4l1m1",
+					"descripcion": "Estructura básica y configuración de usuarios y grupos"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t4l2",
+				"descripcion": "Monitorización y control de dispositivos",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t4l2m1",
+					"descripcion": "Herramientas SNMP y métodos de supervisión"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t5",
+			"descripcion": "Conceptos de seguridad de los sistemas de información. Seguridad física. Seguridad lógica. Amenazas y vulnerabilidades. Técnicas criptográficas y protocolos seguros. Mecanismos de firma digital. Infraestructura física de un CPD: acondicionamiento y equipamiento. Sistemas de gestión de incidencias. Control remoto de puestos de usuario.",
+			"objetivo": "Comprender seguridad de sistemas y criptografía",
+			"soporte": {
+			  "ayuda": "Seguridad de sistemas y firma digital",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"leccion": [
+			  {
+				"codigo": "b4t5l1",
+				"descripcion": "Amenazas, vulnerabilidades y seguridad lógica",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t5l1m1",
+					"descripcion": "Malware, phishing y técnicas de defensa"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t5l2",
+				"descripcion": "Criptografía y firma digital",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t5l2m1",
+					"descripcion": "Algoritmos de cifrado y mecanismos de autenticación"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t6",
+			"descripcion": "Comunicaciones. Medios de transmisión. Modos de comunicación. Equipos terminales y equipos de interconexión y conmutación. Redes de comunicaciones. Redes de conmutación y redes de difusión. Comunicaciones móviles e inalámbricas.",
+			"objetivo": "Aprender fundamentos de comunicaciones y redes",
+			"soporte": {
+			  "ayuda": "Comunicaciones y redes móviles",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"leccion": [
+			  {
+				"codigo": "b4t6l1",
+				"descripcion": "Medios de transmisión y modos de comunicación",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t6l1m1",
+					"descripcion": "Fibra óptica, cobre, microondas y técnicas de modulación"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t6l2",
+				"descripcion": "Redes móviles e inalámbricas",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t6l2m1",
+					"descripcion": "Wi-Fi, 4G/5G y redes de área personal"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t9",
+			"descripcion": "Seguridad y protección en redes de comunicaciones. Seguridad perimetral. Acceso remoto seguro a redes. Redes privadas virtuales (VPN). Seguridad en el puesto del usuario.",
+			"objetivo": "Aprender seguridad en redes y acceso remoto",
+			"soporte": {
+			  "ayuda": "Seguridad en redes y VPNs",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"leccion": [
+			  {
+				"codigo": "b4t9l1",
+				"descripcion": "Cortafuegos y seguridad perimetral",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t9l1m1",
+					"descripcion": "Configuración de firewalls y sistemas IDS/IPS"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t9l2",
+				"descripcion": "Acceso remoto y VPN",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t9l2m1",
+					"descripcion": "Protocolos seguros para teletrabajo y cifrado de túneles"
+				  }
+				]
+			  }
+			]
+		  },
+		  {
+			"codigo": "b4t10",
+			"descripcion": "Redes locales. Tipología. Técnicas de transmisión. Métodos de acceso. Dispositivos de interconexión.",
+			"objetivo": "Comprender redes locales y su infraestructura",
+			"soporte": {
+			  "ayuda": "Redes locales y dispositivos",
+			  "tarjetas": "Tarjetas de memoria",
+			  "cheatsheet": "Cheatsheet: Bloque4. Sistemas y comunicaciones"
+			},
+			"leccion": [
+			  {
+				"codigo": "b4t10l1",
+				"descripcion": "Arquitectura y tipos de LAN",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t10l1m1",
+					"descripcion": "Topologías (bus, estrella, anillo) y métodos de acceso"
+				  }
+				]
+			  },
+			  {
+				"codigo": "b4t10l2",
+				"descripcion": "Dispositivos de interconexión y transmisión",
+				"tipo": "teoria",
+				"microleccion": [
+				  {
+					"codigo": "b4t10l2m1",
+					"descripcion": "Switches, routers y métodos de conmutación"
+				  }
+				]
+			  }
+			]
+		  }
+		]
+	  }
 	]
-} 
+  }
+  
